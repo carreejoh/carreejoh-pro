@@ -1,3 +1,38 @@
 @import "tailwindcss";
 
-@plugin "daisyui"
+/* Logo Font */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-Rubik: Rubik, sans-serif;
+    /* --font-sans: BrandonGrotesque, sans-serif */
+}
+
+@plugin "daisyui" {
+    themes: business --default
+}
+
+/* Light mode */
+@plugin "daisyui/theme" {
+    name: "business";
+    default: true;
+
+    /* Intelligence Green */
+    --color-primary: rgb(0, 129, 126);
+    /* Energy Blue */
+    --color-secondary: rgb(16, 16, 124);
+    /* Daylight Orange */
+    --color-accent: rgb(247, 148, 29);
+    /* Cloud Grey */
+    /* --color-base-100: rgb(255, 255, 255); */
+
+    /* Main base color */
+    /* --color-base-200: rgb(239, 238, 238); */
+    /* Main content color */
+    /* --color-base-100: rgb(255, 255, 255); */
+}

@@ -1,32 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from "react-router-dom";
+
+import Header from "./components/header";
+
+// Pages
+import Landing from "./Pages/home";
+import Services from "./Pages/services";
+import ContactPage from "./Pages/contact";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className="w-[100vw] h-[100vh] bg-base-300 overflow-hidden pt-24">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Landing />
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <Services />
+            }
+          />
+           <Route
+            path="/contact"
+            element={
+              <ContactPage />
+            }
+          />
+        </Routes>
       </div>
-      <h1 className='text-2xl font-bold'>Vite + React</h1>
-      <div className="card">
-        <button className='btn btn-sm' onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
