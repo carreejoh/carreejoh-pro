@@ -2,24 +2,24 @@
 
 /* Logo Font */
 @font-face {
-    font-family: 'Rubik';
-    src: url('/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Gabarito';
+    src: url('/Gabarito-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @theme {
-    --font-Rubik: Rubik, sans-serif;
+    --font-Gabarito: Gabarito, sans-serif;
     /* --font-sans: BrandonGrotesque, sans-serif */
 }
 
 @plugin "daisyui" {
-    themes: business --default
+    themes: corporate --default
 }
 
 /* Light mode */
 @plugin "daisyui/theme" {
-    name: "business";
+    name: "corporate";
     default: true;
 
     /* Intelligence Green */
