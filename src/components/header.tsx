@@ -36,7 +36,8 @@ const Header: React.FC = () => {
     <header className="w-full fixed top-0 z-50 bg-base-100 shadow-sm">
       <div className="h-24 flex items-center justify-between px-6 sm:px-32 md:px-64 lg:px-96">
         {/* Logo */}
-        <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1>
+        {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
+    <img src="/potenLogo.png" className="h-18"/>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-8" role="tablist">
