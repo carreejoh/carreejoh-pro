@@ -1,20 +1,26 @@
 import React from "react";
 import ServicePriceCards from "./components/servicesPriceCards";
+import { Link } from "react-router-dom";
 
 const Services: React.FC = () => {
     return (
         <main
             id="services"
-            className="min-h-screen bg-base-200 text-base-content p-6 sm:p-32 sm:pt-10 overflow-y-scroll flex flex-col items-center"
+            className="min-h-screen bg-base-200 text-base-content pb-8 pt-10 flex flex-col items-center 
+            px-6
+        md:px-8    /* 2rem on ≥768px */
+        lg:px-32   /* 8rem on ≥1024px */
+        xl:px-48   /* 10rem on ≥1280px */
+        2xl:px-72"
         >
             {/* Services Hero */}
             <section className="text-center mb-10">
-                <h1 className="text-3xl font-semibold">Services & Pricing</h1>
+            <h1 className="text-2xl font-bold text-center">Services & Pricing</h1>
             </section>
 
             {/* Base Sites */}
             {/* <h2 className="mt-10 text-xl font-semibold text-center">Base Sites</h2> */}
-            <div className="flex flex-wrap mt-1 justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-1 justify-center">
                 <ServicePriceCards />
             </div>
 
@@ -40,7 +46,7 @@ const Services: React.FC = () => {
             {/* Contact CTA */}
             <h2 className="mt-10 text-xl font-semibold text-center">Ready to Get Started?</h2>
             <p className="text-center">Contact me for a custom quote or questions.</p>
-            <button className="mt-4 btn btn-primary">Request Quote</button>
+            <Link to="/contact" className="mt-4 btn btn-lg btn-primary">Request Quote</Link>
         </main>
     );
 };

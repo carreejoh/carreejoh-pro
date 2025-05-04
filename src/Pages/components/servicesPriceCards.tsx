@@ -3,7 +3,7 @@ import { Check, X } from "lucide-react"
 const ServicePriceCards: React.FC = () => {
     return (
         <>
-            <div className="card w-96 bg-base-100 shadow-sm">
+            <div className="card w-full bg-base-100 col-span-1 shadow-sm">
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Static Site</h2>
@@ -62,7 +62,7 @@ const ServicePriceCards: React.FC = () => {
                     </ul>
                 </div>
             </div>
-            <div className="card w-96 bg-base-100 shadow-sm ml-6">
+            <div className="card w-full bg-base-100 col-span-1 shadow-sm">
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Interactive Site</h2>
@@ -122,7 +122,7 @@ const ServicePriceCards: React.FC = () => {
                 </div>
             </div>
 
-            <div className="card w-96 bg-base-100 shadow-sm ml-6">
+            <div className="card w-full bg-base-100 col-span-1 shadow-sm">
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Server Site</h2>

@@ -12,29 +12,23 @@ function App() {
   return (
     <>
       <Header />
-      <div className="w-[100vw] h-[100vh] bg-base-300 overflow-hidden pt-24">
+      <div
+        className="
+        w-full
+        min-h-screen
+        bg-base-200
+        overflow-hidden
+        pt-24
+      "
+      >
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Landing />
-            }
-          />
-          <Route
-            path="/services"
-            element={
-              <Services />
-            }
-          />
-           <Route
-            path="/contact"
-            element={
-              <ContactPage />
-            }
-          />
+          <Route path="/" element={<Landing />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </>
+
   )
 }
 

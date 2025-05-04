@@ -34,13 +34,19 @@ const Header: React.FC = () => {
 
   return (
     <header className="w-full fixed top-0 z-50 bg-base-100 shadow-sm">
-      <div className="h-24 flex items-center justify-between px-6 sm:px-32 md:px-64 lg:px-96">
+      <div className="h-24 flex items-center justify-between px-4 
+        sm:px-6    /* 1.5rem on ≥640px */
+        md:px-8    /* 2rem on ≥768px */
+        lg:px-32   /* 8rem on ≥1024px */
+        xl:px-48   /* 10rem on ≥1280px */
+        2xl:px-72
+        ">  
         {/* Logo */}
         {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
     <img src="/potenLogo.png" className="h-18"/>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex space-x-8" role="tablist">
+        <nav className="hidden md:flex space-x-4" role="tablist">
           {links.map(({ name, to, key }) => (
             <Link key={key} to={to} className="tab">
               <p

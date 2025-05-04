@@ -1,9 +1,15 @@
-
 const ContactPage: React.FC = () => {
     return (
-        <main className="min-h-screen bg-base-200 text-base-content p-6 sm:p-32 sm:pt-10">
-            <section className="max-w-xl space-y-6 ">
-                <h1 className="text-2xl font-bold">Contact Me</h1>
+        <main className="min-h-screen bg-base-200 flex flex-col items-center text-base-content pb-8 pt-10
+      px-6
+        md:px-8    /* 2rem on ≥768px */
+        lg:px-32   /* 8rem on ≥1024px */
+        xl:px-48   /* 10rem on ≥1280px */
+        2xl:px-72
+      
+      ">
+            <section className="w-full max-w-[700px] mx-auto space-y-6">
+                <h1 className="text-2xl font-bold text-center">Contact Me</h1>
                 <form className="flex flex-col gap-4">
                     <div>
                         <label className="label">
