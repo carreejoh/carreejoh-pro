@@ -1,7 +1,7 @@
 
 const ContactPage: React.FC = () => {
     return (
-        <main className="min-h-screen bg-base-300 text-base-content p-6 sm:p-32 sm:pt-10">
+        <main className="min-h-screen bg-base-200 text-base-content p-6 sm:p-32 sm:pt-10">
             <section className="max-w-xl space-y-6 ">
                 <h1 className="text-2xl font-bold">Contact Me</h1>
                 <form className="flex flex-col gap-4">

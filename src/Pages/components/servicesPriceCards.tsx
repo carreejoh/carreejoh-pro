@@ -1,4 +1,4 @@
-import { Check } from "lucide-react"
+import { Check, X } from "lucide-react"
 
 const ServicePriceCards: React.FC = () => {
     return (
@@ -7,7 +7,7 @@ const ServicePriceCards: React.FC = () => {
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Static Site</h2>
-                        <span className="text-xl">Base: $500</span>
+                        <span className="text-xl">Base: $1500</span>
                     </div>
                     <p>Great for businesses with no user data, and minimal functionality.</p>
                     <ul className="mt-5 flex flex-col gap-2 text-xs">
@@ -44,18 +44,18 @@ const ServicePriceCards: React.FC = () => {
                             <span>Contact forms / info page</span>
                         </li>
                         <li>
-                            <Check
+                            <X
                                 size={16}
                                 className="inline-block mr-2"
-                                color="#555555"
+                                color="#E72D1A"
                             />
                             <span>Admin login, basic server</span>
                         </li>
                         <li>
-                            <Check
+                            <X
                                 size={16}
                                 className="inline-block mr-2"
-                                color="#555555"
+                                color="#E72D1A"
                             />
                             <span>User login with authentication</span>
                         </li>
@@ -66,7 +66,7 @@ const ServicePriceCards: React.FC = () => {
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Interactive Site</h2>
-                        <span className="text-xl">Base: $1000</span>
+                        <span className="text-xl">Base: $2500</span>
                     </div>
                     <p>For businesses that will need to regularly change page info, or give updates.</p>
                     <ul className="mt-5 flex flex-col gap-2 text-xs">
@@ -111,10 +111,10 @@ const ServicePriceCards: React.FC = () => {
                             <span>Admin login, basic server</span>
                         </li>
                         <li>
-                            <Check
+                            <X
                                 size={16}
                                 className="inline-block mr-2"
-                                color="#555555"
+                                color="#E72D1A"
                             />
                             <span>User login with authentication</span>
                         </li>
@@ -126,7 +126,7 @@ const ServicePriceCards: React.FC = () => {
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Server Site</h2>
-                        <span className="text-xl">Base: $1500</span>
+                        <span className="text-xl">Base: $3500</span>
                     </div>
                     <p>A premium site for businesses that need to store user info, keep detailed records.</p>
                     <ul className="mt-5 flex flex-col gap-2 text-xs">
