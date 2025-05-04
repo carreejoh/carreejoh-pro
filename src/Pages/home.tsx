@@ -48,8 +48,6 @@ const Homepage: React.FC = () => {
     lg:grid-cols-4    /* ≥1024px: 4 columns */
     gap-6
     w-full
-    mt-6
-    sm:mt-20
     py-16
   "
 >
