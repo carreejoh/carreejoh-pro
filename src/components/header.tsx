@@ -40,19 +40,20 @@ const Header: React.FC = () => {
         lg:px-32   /* 8rem on ≥1024px */
         xl:px-48   /* 10rem on ≥1280px */
         2xl:px-72
-        ">  
+        ">
         {/* Logo */}
         {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
-    <img src="/potenLogo.png" className="h-18"/>
+        <Link to="/">
+          <img src="/potenLogo.png" className="h-18" />
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-4" role="tablist">
           {links.map(({ name, to, key }) => (
             <Link key={key} to={to} className="tab">
               <p
-                className={`text-lg font-medium ${
-                  selectedLocation === key ? "text-black" : "text-gray-400"
-                }`}
+                className={`text-lg font-medium ${selectedLocation === key ? "text-black" : "text-gray-400"
+                  }`}
               >
                 {name}
               </p>
@@ -82,9 +83,8 @@ const Header: React.FC = () => {
                 onClick={() => setMobileOpen(false)}
               >
                 <p
-                  className={`text-lg font-medium ${
-                    selectedLocation === key ? "text-black" : "text-gray-400"
-                  }`}
+                  className={`text-lg font-medium ${selectedLocation === key ? "text-black" : "text-gray-400"
+                    }`}
                 >
                   {name}
                 </p>
