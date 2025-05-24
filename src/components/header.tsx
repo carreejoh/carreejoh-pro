@@ -44,7 +44,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
         <Link to="/">
-          <img src="/potenLogo.png" className="h-18" />
+          <img src="/potenLogo.png" alt="Bird Logo" className="h-18" />
         </Link>
 
         {/* Desktop nav */}
