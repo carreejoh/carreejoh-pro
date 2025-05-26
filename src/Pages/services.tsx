@@ -20,7 +20,7 @@ const Services: React.FC = () => {
 
             {/* Base Sites */}
             {/* <h2 className="mt-10 text-xl font-semibold text-center">Base Sites</h2> */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-1 justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-1 justify-center">
                 <ServicePriceCards />
             </div>
 
@@ -29,7 +29,7 @@ const Services: React.FC = () => {
             <section className="max-w-3xl text-left mx-auto">
                 <ul className="list-disc list-inside space-y-2 mt-2">
                     <li className="font-regular">
-                        <strong>Custom Domain Registration:</strong> ~$20/year
+                        <strong>Domain/Hosting/Maintenance Fee:</strong> $30/Month
                     </li>
                     <li className="font-regular">
                         <strong>Custom Features:</strong> $50–$200 (complex forms, maps, dynamic)
@@ -37,9 +37,9 @@ const Services: React.FC = () => {
                     <li className="font-regular">
                         <strong>Backend & Server Hosting:</strong> $10-$200/month (user data, receipts, uploaded images)
                     </li>
-                    <li className="font-regular">
+                    {/* <li className="font-regular">
                         <strong>Third-Party API Fees:</strong> $3-$100/month (live yelp reviews, custom data)
-                    </li>
+                    </li> */}
                 </ul>
             </section>
 
