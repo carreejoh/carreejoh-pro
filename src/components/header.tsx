@@ -33,7 +33,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="w-full fixed top-0 z-50 bg-base-100 shadow-sm">
+    <header className="w-full fixed top-0 z-50 bg-base-100 shadow-md">
       <div className="h-24 flex items-center justify-between px-4 
         sm:px-6    /* 1.5rem on ≥640px */
         md:px-8    /* 2rem on ≥768px */
@@ -43,8 +43,9 @@ const Header: React.FC = () => {
         ">
         {/* Logo */}
         {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
-        <Link to="/">
-          <img src="/potenLogo.png" alt="Bird Logo" className="h-18" />
+        <Link to="/" className="flex items-center">
+          <img src="/Base_Logo.png" alt="Logo" className="h-36" />
+          <span className="font-exo text-5xl -mt-1 -ml-4 font-extrabold">RevUp<span className="text-primary">Web</span></span>
         </Link>
 
         {/* Desktop nav */}
@@ -52,7 +53,7 @@ const Header: React.FC = () => {
           {links.map(({ name, to, key }) => (
             <Link key={key} to={to} className="tab">
               <p
-                className={`text-lg font-medium ${selectedLocation === key ? "text-black" : "text-gray-400"
+                className={`text-lg font-medium font-exo ${selectedLocation === key ? "text-primary font-semibold" : "text-base-content"
                   }`}
               >
                 {name}

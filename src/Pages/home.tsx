@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Homepage: React.FC = () => {
   return (
-    <main className="h-full flex flex-col pb-8 items-center bg-base-200 text-base-content     
+    <main className="h-full flex flex-col pb-8 items-center bg-base-300 text-base-content     
      /* 1rem on very small */
      
 
@@ -21,8 +21,8 @@ const Homepage: React.FC = () => {
          overflow-y-auto">
       {/* Hero Section */}
       <section className="flex flex-col items-center text-center max-w-5xl space-y-6">
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-Gabarito font-medium">
-          Affordable, Aesthetic Websites for Local Businesses
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-exo font-medium">
+          Quick, Beautiful Websites for Local Businesses
         </h1>
         <p className="text-lg sm:text-xl">
           Clean, mobile-friendly websites built fast — perfect for small business owners who just need a site that works.
@@ -59,7 +59,7 @@ const Homepage: React.FC = () => {
   "
       >
         {[
-          { Icon: Zap, title: "Fast Turnaround", desc: "Most sites ready in under 7 days", color: "#FEF001" },
+          { Icon: Zap, title: "Fast Turnaround", desc: "Most sites ready in under 14 days", color: "#FEF001" },
           { Icon: DollarSign, title: "Budget-Friendly", desc: "Flat rates with no hidden costs", color: "#69A430" },
           { Icon: MonitorSmartphone, title: "Mobile-Ready", desc: "Looks great on phones, tablets, and desktops", color: "#4B6FB7" },
           { Icon: Wrench, title: "Fully Customizable", desc: "Custom forms, booking systems, and more", color: "#C8C9C3" },
@@ -81,7 +81,7 @@ const Homepage: React.FC = () => {
 
           {/* Left column */}
           <div className="flex-1 basis-full md:basis-1/3 space-y-4">
-            <h3 className="text-lg md:text-xl italic font-semibold text-center md:text-left">
+            <h3 className="text-md md:text-xl italic text-base-content font-semibold text-center md:text-left">
               "No website, no deal for many shoppers."
             </h3>
 
@@ -111,8 +111,8 @@ const Homepage: React.FC = () => {
           </div>
 
           {/* Right column */}
-          <div className="flex-1 basis-full md:basis-2/3 bg-[#181E25] p-6 rounded-lg">
-            <p className="text-base-200 opacity-80 leading-relaxed">
+          <div className="flex-1 basis-full md:basis-2/3 p-6 rounded-lg">
+            <p className="text-base-content/80 opacity-80 leading-relaxed">
               If a potential customer searches your name and nothing comes up (or only an outdated
               directory listing), there’s a high chance they’ll move on to a competitor. Being
               invisible online undermines confidence that your business is legitimate and reliable.
@@ -122,8 +122,8 @@ const Homepage: React.FC = () => {
 
         <div className="max-w-screen-xl mx-auto px-4 flex flex-col-reverse md:flex-row items-start md:items-center gap-8 mt-16 md:mt-24 lg:mt-24">
 
-          <div className="flex-1 basis-full md:basis-2/3 bg-[#181E25] p-6 rounded-lg">
-            <p className="text-base-200 opacity-80 leading-relaxed">
+          <div className="flex-1 basis-full md:basis-2/3 p-6 rounded-lg">
+            <p className="text-base-content/80 leading-relaxed">
               For those businesses with websites, the quality of the site matters for credibility. An outdated, hard-to-use site can be almost as damaging as having no site at all. On the flip side, a modern, informative website immediately conveys professionalism and trustworthiness.
             </p>
           </div>
@@ -134,7 +134,7 @@ const Homepage: React.FC = () => {
 
           {/* Left column */}
           <div className="flex-1 basis-full md:basis-1/3 space-y-4">
-            <h3 className="text-lg md:text-xl italic font-semibold text-center md:text-left">
+            <h3 className="text-lg text-base-content md:text-xl italic font-semibold text-center md:text-left">
               "First impressions matter"
             </h3>
 
@@ -164,7 +164,7 @@ const Homepage: React.FC = () => {
 
           {/* Left column */}
           <div className="flex-1 basis-full md:basis-1/3 space-y-4">
-            <h3 className="text-lg md:text-xl italic font-semibold text-center md:text-left">
+            <h3 className="text-lg text-base-content md:text-xl italic font-semibold text-center md:text-left">
               "Websites help you rank better in search results."
             </h3>
 
@@ -194,8 +194,8 @@ const Homepage: React.FC = () => {
           </div>
 
           {/* Right column */}
-          <div className="flex-1 basis-full md:basis-2/3 bg-[#181E25] p-6 rounded-lg">
-            <p className="text-base-200 opacity-80 leading-relaxed">
+          <div className="flex-1 basis-full md:basis-2/3 p-6 rounded-lg">
+            <p className="text-base-content/80 opacity-80 leading-relaxed">
             Simply having a website (with proper keywords and content about your business) makes it easier for search engines to index your business and show it to searchers.
             This matters because 92% of searchers select a business on the first page of results.
             </p>
