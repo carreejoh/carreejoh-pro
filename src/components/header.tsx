@@ -41,9 +41,10 @@ const Header: React.FC = () => {
         xl:px-48   /* 10rem on ≥1280px */
         2xl:px-72
         ">
+
         {/* Logo */}
         {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center z-[200]">
           <img src="/Base_Logo.png" alt="Logo" className="h-36" />
           <span className="font-exo text-5xl -mt-1 -ml-4 font-extrabold">RevUp<span className="text-primary">Web</span></span>
         </Link>
@@ -84,7 +85,7 @@ const Header: React.FC = () => {
                 onClick={() => setMobileOpen(false)}
               >
                 <p
-                  className={`text-lg font-medium ${selectedLocation === key ? "text-black" : "text-gray-400"
+                  className={`text-lg font-medium font-exo ${selectedLocation === key ? "text-primary font-semibold" : "[#CDCDCD]"
                     }`}
                 >
                   {name}
