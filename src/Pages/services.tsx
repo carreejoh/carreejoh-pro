@@ -15,7 +15,7 @@ const Services: React.FC = () => {
         >
             {/* Services Hero */}
             <section className="text-center mb-10">
-            <h1 className="text-2xl font-bold text-center">Services & Pricing</h1>
+            <h1 className="text-3xl font-bold font-exo text-center">Services & Pricing</h1>
             </section>
 
             {/* Base Sites */}

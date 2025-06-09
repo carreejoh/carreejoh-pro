@@ -1,5 +1,5 @@
 import React from "react";
-import { Zap, DollarSign, MonitorSmartphone, Wrench } from "lucide-react";
+import { Zap, DollarSign, MonitorSmartphone, Wrench, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Homepage: React.FC = () => {
@@ -20,7 +20,7 @@ const Homepage: React.FC = () => {
         2xl:px-72
          overflow-y-auto">
       {/* Hero Section */}
-      <section className="flex flex-col items-center text-center max-w-5xl space-y-6">
+      <section className="flex flex-col items-center text-center max-w-5xl space-y-10">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-exo font-medium">
           Quick, Beautiful Websites for Local Businesses
         </h1>
@@ -64,7 +64,7 @@ const Homepage: React.FC = () => {
           { Icon: MonitorSmartphone, title: "Mobile-Ready", desc: "Looks great on phones, tablets, and desktops", color: "#4B6FB7" },
           { Icon: Wrench, title: "Fully Customizable", desc: "Custom forms, booking systems, and more", color: "#C8C9C3" },
         ].map(({ Icon, title, desc, color }) => (
-          <div key={title} className="card bg-base-100 shadow-sm">
+          <div key={title} className="card bg-base-100 shadow-md">
             <div className="card-body flex flex-col items-center space-y-2">
               <Icon size={32} color={color} />
               <h2 className="card-title text-lg">{title}</h2>
@@ -75,132 +75,81 @@ const Homepage: React.FC = () => {
       </section>
       <div className="divider"></div>
 
-      <h2 className="text-2xl font-bold text-center pt-10">Why Every Business Needs a Website</h2>
-      <section className="w-full pt-6 sm:pt-8 md:pt-14 lg:pt-18">
-        <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-start md:items-center gap-8">
+      <h2 className="text-3xl font-bold text-center pt-10 font-exo">Why Every Business Needs a Website</h2>
+      <section className="w-full flex flex-col space-y-16 justify-center items-center pt-6 sm:pt-8 md:pt-14 lg:pt-18">
 
-          {/* Left column */}
-          <div className="flex-1 basis-full md:basis-1/3 space-y-4">
-            <h3 className="text-md md:text-xl italic text-base-content font-semibold text-center md:text-left">
-              "No website, no deal for many shoppers."
-            </h3>
 
-            {/* Stat + sentence—all flex, no floats */}
-            <div className="flex items-start">
-              <span className="flex-shrink-0 text-5xl font-bold italic text-primary mr-4 leading-none">
-                62%
-              </span>
-              <p className="leading-relaxed">
-                Of consumers will disregard a small business if they can’t find it online.
-              </p>
-            </div>
-
-            <div className="text-right">
-              <a
-                href="https://js-interactive.com/local-seo-latest-statistics/#:~:text=%2A%2082,%E2%80%93%20BrightLocal"
-                className="text-sm font-semibold underline"
-              >
-                – js-interactive
-              </a>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="hidden md:flex self-stretch">
-            <div className="border-l border-base-300 h-full" />
-          </div>
-
-          {/* Right column */}
-          <div className="flex-1 basis-full md:basis-2/3 p-6 rounded-lg">
-            <p className="text-base-content/80 opacity-80 leading-relaxed">
-              If a potential customer searches your name and nothing comes up (or only an outdated
-              directory listing), there’s a high chance they’ll move on to a competitor. Being
-              invisible online undermines confidence that your business is legitimate and reliable.
+        <div className="flex flex-col max-w-3xl space-y-3 justify-center items-center">
+          <h3 className="text-lg md:text-2xl italic text-base-content font-semibold text-center md:text-left">
+            "No website, no deal for many shoppers."
+          </h3>
+          <div className="flex items-end">
+            <span className="flex-shrink-0 text-3xl font-bold italic text-primary mr-2 mb-1 leading-none">
+              62%
+            </span>
+            <p className="leading-relaxed flex items-center">
+              of consumers will disregard a small business if they can’t find it online.
+              <Link className="ml-3 mb-[2px]" to="https://js-interactive.com/local-seo-latest-statistics/#:~:text=%2A%2082,%E2%80%93%20BrightLocal">
+                <ExternalLink color="#D8161A" size={17} />
+              </Link>
             </p>
           </div>
+          <p className="text-base-content/80 opacity-80 leading-relaxed indent-8">
+            If a potential customer searches your name and nothing comes up (or only an outdated
+            directory listing), there’s a high chance they’ll move on to a competitor. Being
+            invisible online undermines confidence that your business is legitimate and reliable.
+          </p>
         </div>
 
-        <div className="max-w-screen-xl mx-auto px-4 flex flex-col-reverse md:flex-row items-start md:items-center gap-8 mt-16 md:mt-24 lg:mt-24">
+        <div className="flex flex-col max-w-3xl space-y-3 justify-center items-center">
+          <h3 className="text-lg md:text-2xl italic text-base-content font-semibold text-center md:text-left">
+            "Maps listings drive high-value customer engagement."
+          </h3>
 
-          <div className="flex-1 basis-full md:basis-2/3 p-6 rounded-lg">
-            <p className="text-base-content/80 leading-relaxed">
-              For those businesses with websites, the quality of the site matters for credibility. An outdated, hard-to-use site can be almost as damaging as having no site at all. On the flip side, a modern, informative website immediately conveys professionalism and trustworthiness.
+          <div className="flex items-end">
+            <span className="flex-shrink-0 text-3xl font-bold italic text-primary mr-2 mb-1 leading-none">
+              70%
+            </span>
+            <p className="leading-relaxed flex items-center">
+              of users are more likely to visit a business that has a complete Google listing.
+              <Link
+                className="ml-3 mb-[2px]"
+                to="https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/online-search-trends-local-search/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ExternalLink color="#D8161A" size={17} />
+              </Link>
             </p>
           </div>
-          {/* Divider */}
-          <div className="hidden md:flex self-stretch">
-            <div className="border-l border-base-300 h-full" />
-          </div>
-
-          {/* Left column */}
-          <div className="flex-1 basis-full md:basis-1/3 space-y-4">
-            <h3 className="text-lg text-base-content md:text-xl italic font-semibold text-center md:text-left">
-              "First impressions matter"
-            </h3>
-
-            {/* Stat + sentence—all flex, no floats */}
-            <div className="flex items-start">
-              <span className="flex-shrink-0 text-5xl font-bold italic text-primary mr-4 leading-none">
-                75%
-              </span>
-              <p className="leading-relaxed">
-                Of people admit to judging a company’s credibility based on its website design.
-              </p>
-            </div>
-
-            <div className="text-right">
-              <a
-                href="https://www.sweor.com/firstimpressions#:~:text=11"
-                className="text-sm font-semibold underline"
-              >
-                – sweor
-              </a>
-            </div>
-          </div>
+          <p className="text-base-content/80 opacity-80 leading-relaxed indent-8">
+            Google and Apple Maps aren’t just about directions—they’re high-conversion platforms.
+            When customers find your business on Google Maps with accurate info and a website link, they’re
+            significantly more likely to take action. In fact, businesses with complete listings see 7x more
+            clicks and are 2.7x more likely to be considered reputable.
+          </p>
         </div>
-        {/* Right column */}
 
-        <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-start md:items-center gap-8 mt-16 md:mt-24 lg:mt-24">
-
-          {/* Left column */}
-          <div className="flex-1 basis-full md:basis-1/3 space-y-4">
-            <h3 className="text-lg text-base-content md:text-xl italic font-semibold text-center md:text-left">
-              "Websites help you rank better in search results."
-            </h3>
-
-            {/* Stat + sentence—all flex, no floats */}
-            <div className="flex items-start">
-              <span className="flex-shrink-0 text-5xl font-bold italic text-primary mr-4 leading-none">
-              92%
-              </span>
-              <p className="leading-relaxed">
-              Of searchers select a business on the first page of results.
-              </p>
-            </div>
-
-            <div className="text-right">
-              <a
-                href="https://js-interactive.com/local-seo-latest-statistics/#:~:text=%2A%2082,%E2%80%93%20BrightLocal"
-                className="text-sm font-semibold underline"
-              >
-                – js-interactive
-              </a>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="hidden md:flex self-stretch">
-            <div className="border-l border-base-300 h-full" />
-          </div>
-
-          {/* Right column */}
-          <div className="flex-1 basis-full md:basis-2/3 p-6 rounded-lg">
-            <p className="text-base-content/80 opacity-80 leading-relaxed">
-            Simply having a website (with proper keywords and content about your business) makes it easier for search engines to index your business and show it to searchers.
-            This matters because 92% of searchers select a business on the first page of results.
+        <div className="flex flex-col max-w-3xl space-y-3 justify-center items-center">
+          <h3 className="text-lg md:text-2xl italic text-base-content font-semibold text-center md:text-left">
+            "First impressions matter"
+          </h3>
+          <div className="flex items-end">
+            <span className="flex-shrink-0 text-3xl font-bold italic text-primary mr-2 mb-1 leading-none">
+              75%
+            </span>
+            <p className="leading-relaxed flex items-center">
+              of people admit to judging a company’s credibility based on its website design.
+              <Link className="ml-3 mb-[2px]" to="https://www.sweor.com/firstimpressions#:~:text=11">
+                <ExternalLink color="#D8161A" size={17} />
+              </Link>
             </p>
           </div>
+          <p className="text-base-content/80 opacity-80 leading-relaxed indent-8">
+            For those businesses with websites, the quality of the site matters for credibility. An outdated, hard-to-use site can be almost as damaging as having no site at all. On the flip side, a modern, informative website immediately conveys professionalism and trustworthiness.
+          </p>
         </div>
+
       </section>
 
 
