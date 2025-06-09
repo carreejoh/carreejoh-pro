@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           {links.map(({ name, to, key }) => (
             <Link key={key} to={to} className="tab">
               <p
-                className={`text-lg font-medium font-exo ${selectedLocation === key ? "text-primary font-semibold" : "text-base-content"
+                className={`text-lg font-exo ${selectedLocation === key ? "text-primary font-bold" : "text-base-content font-medium"
                   }`}
               >
                 {name}
