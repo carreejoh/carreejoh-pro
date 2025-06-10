@@ -20,9 +20,10 @@ function App() {
       <div className="w-full bg-base-200 pt-24">
         <div
           className="
-            h-[calc(100vh-6rem)]
-            overflow-y-auto
-            scrolling-touch
+            min-h-[calc(100vh-6rem)]
+      overflow-y-auto
+      scroll-smooth
+      overscroll-contain
           "
         >
           <Routes>

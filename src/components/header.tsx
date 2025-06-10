@@ -45,8 +45,8 @@ const Header: React.FC = () => {
         {/* Logo */}
         {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
         <Link to="/" className="flex items-center z-[200]">
-          <img src="/Base_Logo.png" alt="Logo" className="h-36" />
-          <span className="font-exo text-5xl -mt-1 -ml-4 font-extrabold">RevUp<span className="text-primary">Web</span></span>
+          <img src="/Base_Logo.png" alt="Logo" className="h-24 sm:h-36" />
+          <span className="font-exo text-4xl sm:text-5xl -mt-1 -ml-4 font-extrabold">RevUp<span className="text-primary">Web</span></span>
         </Link>
 
         {/* Desktop nav */}
