@@ -45,12 +45,12 @@ const Header: React.FC = () => {
         {/* Logo */}
         {/* <h1 className="text-3xl font-Gabarito font-medium">Carreejoh Web</h1> */}
         <Link to="/" className="flex items-center z-[200]">
-          <img src="/Base_Logo.png" alt="Logo" className="h-24 md:h-36" />
+          <img src="/Base_Logo.png" alt="RevUpWeb company logo" className="h-24 md:h-36" />
           <span className="font-exo text-3xl md:text-5xl -mt-1 -ml-4 font-extrabold">RevUp<span className="text-primary">Web</span></span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex space-x-4" role="tablist">
+        <nav className="hidden md:flex space-x-4" role="navigation" aria-label="Main">
           {links.map(({ name, to, key }) => (
             <Link key={key} to={to} className="tab">
               <p
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <nav className="md:hidden bg-base-100 shadow-md">
+        <nav className="md:hidden bg-base-100 shadow-md" role="navigation" aria-label="Mobile Navigation">
           <div className="flex flex-col items-center py-4 space-y-4">
             {links.map(({ name, to, key }) => (
               <Link
