@@ -6,6 +6,7 @@ import Header from "./components/header";
 import Landing from "./Pages/home";
 import Services from "./Pages/services";
 import ContactPage from "./Pages/contact";
+import Devform from "./Pages/Devform";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/devform" element={<Devform />} />
           </Routes>
         </div>
       </div>

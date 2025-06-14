@@ -1,0 +1,197 @@
+{
+    "theme": {
+      "daisy_theme": "business",
+      "borders": "rounded-none",
+      "primary_color": {
+        "included": false,
+        "defaultValue": "#C13F41",
+        "customValue": ""
+      },
+      "secondary_color": {
+        "included": false,
+        "defaultValue": "#000000",
+        "customValue": ""
+      }
+    },
+    "branding": {
+      "logo": {
+        "included": false,
+        "defaultValue": "/brand_imgs/logo.png",
+        "customValue": ""
+      },
+      "short_name": {
+        "included": false,
+        "defaultValue": "168 Auto Repair",
+        "customValue": ""
+      },
+      "long_name": {
+        "included": false,
+        "defaultValue": "168 Auto Repair LLC",
+        "customValue": ""
+      }
+    },
+    "contact": {
+      "phone": {
+        "included": false,
+        "defaultValue": "(801) 906-8168",
+        "customValue": ""
+      },
+      "phoneLink": {
+        "included": false,
+        "defaultValue": "8019068168",
+        "customValue": ""
+      },
+      "email": {
+        "included": 0,
+        "defaultValue": "168_Auto_Repair@gmail.com",
+        "customValue": "",
+        "semiCustomValue": ""
+      }
+    },
+    "location": {
+      "address": {
+        "included": false,
+        "defaultValue": "61 2100 S,",
+        "customValue": ""
+      },
+      "addressSecondary": {
+        "included": false,
+        "defaultValue": "South Salt Lake, UT 84115",
+        "customValue": ""
+      },
+      "addressFull": {
+        "included": false,
+        "defaultValue": "61 2100 S, South Salt Lake, UT 84115",
+        "customValue": ""
+      },
+      "googleMapEmbedLink": {
+        "included": false,
+        "defaultValue": "https://www.google.com/maps/embed?...168%20Auto%20Repair",
+        "customValue": ""
+      },
+      "googleMapLink": {
+        "included": false,
+        "defaultValue": "https://www.google.com/maps/place/168+Auto+Repair...",
+        "customValue": ""
+      },
+      "appleMapLink": {
+        "included": false,
+        "defaultValue": "https://maps.apple.com/?address=168%20W%20Gregson...",
+        "customValue": ""
+      }
+    },
+    "hours": {
+      "included": false,
+      "defaultValue": [
+        { "day": "Monday", "time": "9:30 AM - 6 PM" },
+        { "day": "Tuesday", "time": "9:30 AM - 6 PM" },
+        { "day": "Wednesday", "time": "9:30 AM - 6 PM" },
+        { "day": "Thursday", "time": "9:30 AM - 6 PM" },
+        { "day": "Friday", "time": "9:30 AM - 6 PM" },
+        { "day": "Saturday", "time": "Closed" },
+        { "day": "Sunday", "time": "Closed" }
+      ],
+      "customValue": []
+    },
+    "landing": {
+      "image": {
+        "included": false,
+        "defaultValue": "/brand_imgs/hero.png",
+        "customValue": ""
+      },
+      "title": {
+        "included": false,
+        "defaultValue": "Quality Service at Record Speeds",
+        "customValue": ""
+      },
+      "subtext": {
+        "included": false,
+        "defaultValue": "Honest, skilled mechanics serving Salt Lake City and beyond. We keep you running smoothly.",
+        "customValue": ""
+      },
+      "cta": "GIVE US A CALL",
+      "type": 0
+    },
+    "services": {
+      "background": {
+        "included": false,
+        "defaultValue": "url(/services_imgs/tire_background.jpg)",
+        "customValue": ""
+      },
+      "cards": [
+        {
+          "title": "Tire Services",
+          "defaultValue": {
+            "description": "We handle all your tire needs with expert care.",
+            "image": "/services_imgs/tireBalance.jpg",
+            "items": ["Tire repair", "Tire balancing", "Tire swapping"]
+          },
+          "included": false,
+          "customValue": {}
+        },
+        {
+          "title": "Engine Repair",
+          "defaultValue": {
+            "description": "Keep your engine running like new.",
+            "image": "/services_imgs/engineRepair.jpg",
+            "items": ["Diagnostics", "Timing belt replacement", "Engine rebuild"]
+          },
+          "included": false,
+          "customValue": {}
+        },
+        {
+          "title": "Scheduled Maintenance",
+          "defaultValue": {
+            "description": "Regular service to keep your vehicle in top shape.",
+            "image": "/services_imgs/oilChange.jpeg",
+            "items": ["Oil change", "Battery testing", "Fluid change"]
+          },
+          "included": false,
+          "customValue": {}
+        },
+        {
+          "title": "Brakes",
+          "defaultValue": {
+            "description": "Stay safe with professional brake service.",
+            "image": "/services_imgs/brakeJob.jpg",
+            "items": ["Brake pad replacement", "Rotor resurfacing", "Fluid bleed"]
+          },
+          "included": false,
+          "customValue": {}
+        }
+      ]
+    },
+    "about": {
+      "team_image": {
+        "included": false,
+        "defaultValue": "/about_imgs/team.jpg",
+        "customValue": ""
+      },
+      "owner_image": {
+        "included": false,
+        "defaultValue": "/about_imgs/owner.png",
+        "customValue": ""
+      },
+      "description": {
+        "included": false,
+        "defaultValue": "Founded with a mission to redefine trust in auto repair, we’ve built our reputation on honesty, hard work, and community values. Whether it’s a quick tune-up or a major rebuild, you can count on us to get the job done right.",
+        "customValue": ""
+      },
+      "team_description": {
+        "included": false,
+        "defaultValue": "Exceptional team members ready to get you back on the road with precision and care. Each technician brings years of experience, honesty, and a commitment to getting the job done right the first time.",
+        "customValue": ""
+      },
+      "owner_name": {
+        "included": false,
+        "defaultValue": "John Doe",
+        "customValue": ""
+      },
+      "owner_description": {
+        "included": false,
+        "defaultValue": "Founded with a mission to redefine trust in auto repair, we’ve built our reputation on honesty, hard work, and community values. Whether it’s a quick tune-up or a major rebuild, you can count on us to get the job done right.",
+        "customValue": ""
+      }
+    }
+  }
+  
