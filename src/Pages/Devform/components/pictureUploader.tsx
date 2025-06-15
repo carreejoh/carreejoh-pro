@@ -16,7 +16,7 @@ interface FileObject {
 }
 
 function PictureUploader({
-  pictureState,
+  // pictureState,
   setPictureState,
   uploadText,
 }: PictureUploaderProps) {

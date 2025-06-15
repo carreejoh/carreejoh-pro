@@ -5,17 +5,17 @@ import ColorInput from './Devform/components/ColorInput';
 import CheckboxField from './Devform/components/CheckboxField';
 import TextAreaInput from './Devform/components/TextAreaInput';
 import ExclusionReason from './Devform/components/ExclusionReason';
-import HoursInput from './Devform/components/HoursInput';
+// import HoursInput from './Devform/components/HoursInput';
 import ServiceCard from './Devform/components/ServiceCard';
 import PictureUploader from './Devform/components/pictureUploader';
 import InstructionModels from './Devform/components/InstructionModels';
 import InstructionModal from './Devform/components/InstructionModal';
 import InstructionButton from './Devform/components/InstructionButton';
 
-interface DayHours {
-  day: string;
-  time: string;
-}
+// interface DayHours {
+//   day: string;
+//   time: string;
+// }
 
 interface HoursOfOperation {
   monday: { isOpen: boolean; openTime: string; closeTime: string };
