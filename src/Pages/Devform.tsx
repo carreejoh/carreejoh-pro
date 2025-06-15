@@ -11,6 +11,11 @@ import PictureUploader from './Devform/components/pictureUploader';
 import InstructionModels from './Devform/components/InstructionModels';
 import InstructionModal from './Devform/components/InstructionModal';
 import InstructionButton from './Devform/components/InstructionButton';
+import EnhancedExclusionReason from './Devform/components/EnhancedExclusionReason';
+import UniversalExclusionReason from './Devform/components/UniversalExclusionReason';
+import { ChecklistItem, createChecklist, getChecklistType } from './Devform/components/ChecklistManager';
+import { generateConfig, downloadConfig } from './Devform/utlis/generate_config';
+import { downloadMissingReport } from './Devform/utlis/generate_missing';
 
 interface DayHours {
   day: string;
@@ -39,6 +44,7 @@ interface ConfigField {
   defaultValue: any;
   customValue: any;
   exclusionReason?: string;
+  checklist?: ChecklistItem[];
 }
 
 interface FormData {
@@ -90,19 +96,22 @@ const Devform: React.FC = () => {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('color')
       },
       secondary_color: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('color')
       },
       font: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('font')
       }
     },
     branding: {
@@ -110,19 +119,22 @@ const Devform: React.FC = () => {
         included: true,
         defaultValue: "",
         customValue: { cropped: "", original: "" },
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('logo')
       },
       short_name: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('text')
       },
       long_name: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('text')
       }
     },
     contact: {
@@ -130,14 +142,16 @@ const Devform: React.FC = () => {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('phone')
       },
       email: {
         included: true,
         defaultValue: "",
         customValue: "",
         semiCustomValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('email')
       }
     },
     location: {
@@ -145,67 +159,75 @@ const Devform: React.FC = () => {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('address')
       },
       googleMapEmbedLink: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('maps')
       },
       googleMapLink: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('maps')
       },
       appleMapLink: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('maps')
       }
     },
     hours: {
       included: true,
       defaultValue: {
-        monday: { isOpen: false, openTime: '', closeTime: '' },
-        tuesday: { isOpen: false, openTime: '', closeTime: '' },
-        wednesday: { isOpen: false, openTime: '', closeTime: '' },
-        thursday: { isOpen: false, openTime: '', closeTime: '' },
-        friday: { isOpen: false, openTime: '', closeTime: '' },
-        saturday: { isOpen: false, openTime: '', closeTime: '' },
-        sunday: { isOpen: false, openTime: '', closeTime: '' },
+        monday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        tuesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        wednesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        thursday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        friday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        saturday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        sunday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
       },
       customValue: {
-        monday: { isOpen: false, openTime: '', closeTime: '' },
-        tuesday: { isOpen: false, openTime: '', closeTime: '' },
-        wednesday: { isOpen: false, openTime: '', closeTime: '' },
-        thursday: { isOpen: false, openTime: '', closeTime: '' },
-        friday: { isOpen: false, openTime: '', closeTime: '' },
-        saturday: { isOpen: false, openTime: '', closeTime: '' },
-        sunday: { isOpen: false, openTime: '', closeTime: '' },
+        monday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        tuesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        wednesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        thursday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        friday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        saturday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+        sunday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
       },
-      exclusionReason: ""
+      exclusionReason: "",
+      checklist: createChecklist('hours')
     },
     landing: {
       image: {
         included: true,
         defaultValue: "",
         customValue: { cropped: "", original: "" },
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('image')
       },
       title: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('text')
       },
       subtext: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('text')
       }
     },
     services: {
@@ -216,37 +238,43 @@ const Devform: React.FC = () => {
         included: true,
         defaultValue: "",
         customValue: { cropped: "", original: "" },
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('image')
       },
       owner_image: {
         included: true,
         defaultValue: "",
         customValue: { cropped: "", original: "" },
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('image')
       },
       description: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('description')
       },
       team_description: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('description')
       },
       owner_name: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('text')
       },
       owner_description: {
         included: true,
         defaultValue: "",
         customValue: "",
-        exclusionReason: ""
+        exclusionReason: "",
+        checklist: createChecklist('description')
       }
     }
   });
@@ -305,6 +333,26 @@ const Devform: React.FC = () => {
     }));
   };
 
+  const handleChecklistChange = (section: string, field: string, itemId: string, checked: boolean) => {
+    setFormData(prev => {
+      const currentField = (prev[section as keyof FormData] as any)[field];
+      const updatedChecklist = currentField.checklist?.map((item: ChecklistItem) =>
+        item.id === itemId ? { ...item, checked } : item
+      ) || [];
+
+      return {
+        ...prev,
+        [section]: {
+          ...prev[section as keyof FormData],
+          [field]: {
+            ...currentField,
+            checklist: updatedChecklist
+          }
+        }
+      };
+    });
+  };
+
   const handleHoursChange = (day: keyof HoursOfOperation, field: 'isOpen' | 'openTime' | 'closeTime', value: boolean | string) => {
     setFormData(prev => ({
       ...prev,
@@ -352,7 +400,8 @@ const Devform: React.FC = () => {
         image: { cropped: "", original: "" },
         items: []
       },
-      exclusionReason: ""
+      exclusionReason: "",
+      checklist: createChecklist('services')
     };
     
     setFormData(prev => ({
@@ -376,14 +425,224 @@ const Devform: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    
+    // Generate and download the configuration file
+    const config = generateConfig(formData);
+    downloadConfig(config, formData);
+    
+    // Generate and download the missing report
+    downloadMissingReport(formData);
+    
+    console.log('Configuration and missing report generated successfully!');
+  };
+
+  const handleRestart = () => {
+    if (window.confirm('Are you sure you want to restart? This will clear all form data.')) {
+      setFormData({
+        theme: {
+          primary_color: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('color')
+          },
+          secondary_color: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('color')
+          },
+          font: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('font')
+          }
+        },
+        branding: {
+          logo: {
+            included: true,
+            defaultValue: "",
+            customValue: { cropped: "", original: "" },
+            exclusionReason: "",
+            checklist: createChecklist('logo')
+          },
+          short_name: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('text')
+          },
+          long_name: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('text')
+          }
+        },
+        contact: {
+          phoneLink: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('phone')
+          },
+          email: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            semiCustomValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('email')
+          }
+        },
+        location: {
+          addressFull: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('address')
+          },
+          googleMapEmbedLink: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('maps')
+          },
+          googleMapLink: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('maps')
+          },
+          appleMapLink: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('maps')
+          }
+        },
+                 hours: {
+           included: true,
+           defaultValue: {
+             monday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             tuesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             wednesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             thursday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             friday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             saturday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             sunday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+           },
+           customValue: {
+             monday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             tuesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             wednesday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             thursday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             friday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             saturday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+             sunday: { isOpen: false, openTime: '08:00', closeTime: '17:00' },
+           },
+           exclusionReason: "",
+           checklist: createChecklist('hours')
+         },
+        landing: {
+          image: {
+            included: true,
+            defaultValue: "",
+            customValue: { cropped: "", original: "" },
+            exclusionReason: "",
+            checklist: createChecklist('image')
+          },
+          title: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('text')
+          },
+          subtext: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('text')
+          }
+        },
+        services: {
+          cards: []
+        },
+        about: {
+          team_image: {
+            included: true,
+            defaultValue: "",
+            customValue: { cropped: "", original: "" },
+            exclusionReason: "",
+            checklist: createChecklist('image')
+          },
+          owner_image: {
+            included: true,
+            defaultValue: "",
+            customValue: { cropped: "", original: "" },
+            exclusionReason: "",
+            checklist: createChecklist('image')
+          },
+          description: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('description')
+          },
+          team_description: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('description')
+          },
+          owner_name: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('text')
+          },
+          owner_description: {
+            included: true,
+            defaultValue: "",
+            customValue: "",
+            exclusionReason: "",
+            checklist: createChecklist('description')
+          }
+        }
+      });
+    }
   };
 
   return (
     <div className="container mx-auto p-4">
       <form onSubmit={handleSubmit} className="card bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="card-title text-3xl font-bold mb-8 text-center">Business Configuration Form</h2>
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="card-title text-3xl font-bold">Business Configuration Form</h2>
+            <button
+              type="button"
+              onClick={handleRestart}
+              className="btn btn-error btn-outline"
+            >
+              🔄 Restart Form
+            </button>
+          </div>
 
           <div className="space-y-8">
             {/* Theme Section */}
@@ -393,7 +652,7 @@ const Devform: React.FC = () => {
                 <InstructionButton onClick={() => setOpenModal('theme')} />
               </div>
               <div className="space-y-4">
-                <div className="bg-base-100 p-4 rounded-lg">
+                <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                   <CheckboxField
                     label="Include Primary Color"
                     name="theme.primary_color"
@@ -411,12 +670,17 @@ const Devform: React.FC = () => {
                       />
                     </div>
                   ) : (
-                    <ExclusionReason
+                    <EnhancedExclusionReason
                       value={formData.theme.primary_color.exclusionReason || ''}
                       onChange={(e) => {
                         e.target.name = 'theme.primary_color';
                         handleExclusionReasonChange(e);
                       }}
+                      checklistItems={formData.theme.primary_color.checklist || []}
+                      onChecklistChange={(itemId, checked) => 
+                        handleChecklistChange('theme', 'primary_color', itemId, checked)
+                      }
+                      title="Primary Color"
                     />
                   )}
                 </div>
@@ -439,17 +703,22 @@ const Devform: React.FC = () => {
                       />
                     </div>
                   ) : (
-                    <ExclusionReason
+                    <EnhancedExclusionReason
                       value={formData.theme.secondary_color.exclusionReason || ''}
                       onChange={(e) => {
                         e.target.name = 'theme.secondary_color';
                         handleExclusionReasonChange(e);
                       }}
+                      checklistItems={formData.theme.secondary_color.checklist || []}
+                      onChecklistChange={(itemId, checked) => 
+                        handleChecklistChange('theme', 'secondary_color', itemId, checked)
+                      }
+                      title="Secondary Color"
                     />
                   )}
                 </div>
 
-                <div className="bg-base-100 p-4 rounded-lg">
+                <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                   <CheckboxField
                     label="Include Font"
                     name="theme.font"
@@ -468,12 +737,17 @@ const Devform: React.FC = () => {
                       />
                     </div>
                   ) : (
-                    <ExclusionReason
+                    <EnhancedExclusionReason
                       value={formData.theme.font.exclusionReason || ''}
                       onChange={(e) => {
                         e.target.name = 'theme.font';
                         handleExclusionReasonChange(e);
                       }}
+                      checklistItems={formData.theme.font.checklist || []}
+                      onChecklistChange={(itemId, checked) => 
+                        handleChecklistChange('theme', 'font', itemId, checked)
+                      }
+                      title="Font"
                     />
                   )}
                 </div>
@@ -486,7 +760,7 @@ const Devform: React.FC = () => {
                 <h3 className="text-lg font-semibold">Business Branding</h3>
                 <InstructionButton onClick={() => setOpenModal('branding')} />
               </div>
-              <div className="bg-base-100 p-4 rounded-lg">
+              <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                 <CheckboxField
                   label="Include Logo"
                   name="branding.logo"
@@ -511,17 +785,23 @@ const Devform: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="branding"
+                    field="logo"
                     value={formData.branding.logo.exclusionReason || ''}
                     onChange={(e) => {
                       e.target.name = 'branding.logo';
                       handleExclusionReasonChange(e);
                     }}
+                    checklistItems={formData.branding.logo.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('branding', 'logo', itemId, checked)
+                    }
                   />
                 )}
               </div>
 
-              <div className="bg-base-100 p-4 rounded-lg">
+              <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                 <CheckboxField
                   label="Include Short Name"
                   name="branding.short_name"
@@ -539,17 +819,23 @@ const Devform: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="branding"
+                    field="short_name"
                     value={formData.branding.short_name.exclusionReason || ''}
                     onChange={(e) => {
                       e.target.name = 'branding.short_name';
                       handleExclusionReasonChange(e);
                     }}
+                    checklistItems={formData.branding.short_name.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('branding', 'short_name', itemId, checked)
+                    }
                   />
                 )}
               </div>
 
-              <div className="bg-base-100 p-4 rounded-lg">
+              <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                 <CheckboxField
                   label="Include Long Name"
                   name="branding.long_name"
@@ -567,12 +853,18 @@ const Devform: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="branding"
+                    field="long_name"
                     value={formData.branding.long_name.exclusionReason || ''}
                     onChange={(e) => {
                       e.target.name = 'branding.long_name';
                       handleExclusionReasonChange(e);
                     }}
+                    checklistItems={formData.branding.long_name.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('branding', 'long_name', itemId, checked)
+                    }
                   />
                 )}
               </div>
@@ -584,7 +876,7 @@ const Devform: React.FC = () => {
                 <h3 className="text-lg font-semibold">Contact Details</h3>
                 <InstructionButton onClick={() => setOpenModal('contact')} />
               </div>
-              <div className="bg-base-100 p-4 rounded-lg">
+              <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                 <CheckboxField
                   label="Include Phone Number"
                   name="contact.phoneLink"
@@ -607,17 +899,23 @@ const Devform: React.FC = () => {
                     </div>
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="contact"
+                    field="phoneLink"
                     value={formData.contact.phoneLink.exclusionReason || ''}
                     onChange={(e) => {
                       e.target.name = 'contact.phoneLink';
                       handleExclusionReasonChange(e);
                     }}
+                    checklistItems={formData.contact.phoneLink.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('contact', 'phoneLink', itemId, checked)
+                    }
                   />
                 )}
               </div>
 
-              <div className="bg-base-100 p-4 rounded-lg">
+              <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                 <CheckboxField
                   label="Include Email"
                   name="contact.email"
@@ -636,12 +934,18 @@ const Devform: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="contact"
+                    field="email"
                     value={formData.contact.email.exclusionReason || ''}
                     onChange={(e) => {
                       e.target.name = 'contact.email';
                       handleExclusionReasonChange(e);
                     }}
+                    checklistItems={formData.contact.email.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('contact', 'email', itemId, checked)
+                    }
                   />
                 )}
               </div>
@@ -654,7 +958,7 @@ const Devform: React.FC = () => {
                 <InstructionButton onClick={() => setOpenModal('location')} />
               </div>
               {Object.entries(formData.location).map(([key, field]) => (
-                <div key={key} className="bg-base-100 p-4 rounded-lg">
+                <div key={key} className={`bg-base-100 p-4 rounded-lg ${key === 'addressFull' ? 'border-4 border-orange-500' : ''}`}>
                   <CheckboxField
                     label={`Include ${key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}`}
                     name={`location.${key}`}
@@ -679,12 +983,18 @@ const Devform: React.FC = () => {
                       )}
                     </div>
                   ) : (
-                    <ExclusionReason
+                    <UniversalExclusionReason
+                      section="location"
+                      field={key}
                       value={field.exclusionReason || ''}
                       onChange={(e) => {
                         e.target.name = `location.${key}`;
                         handleExclusionReasonChange(e);
                       }}
+                      checklistItems={field.checklist || []}
+                      onChecklistChange={(itemId, checked) => 
+                        handleChecklistChange('location', key, itemId, checked)
+                      }
                     />
                   )}
                 </div>
@@ -697,7 +1007,7 @@ const Devform: React.FC = () => {
                 <h3 className="text-lg font-semibold">Operating Hours</h3>
                 <InstructionButton onClick={() => setOpenModal('hours')} />
               </div>
-              <div className="bg-base-100 p-4 rounded-lg">
+              <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                 <CheckboxField
                   label="Include Hours of Operation"
                   name="hours"
@@ -782,7 +1092,9 @@ const Devform: React.FC = () => {
                     </div>
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="hours"
+                    field="hours"
                     value={formData.hours.exclusionReason || ''}
                     onChange={(e) => {
                       setFormData(prev => ({
@@ -790,6 +1102,10 @@ const Devform: React.FC = () => {
                         hours: { ...prev.hours, exclusionReason: e.target.value }
                       }));
                     }}
+                    checklistItems={formData.hours.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('hours', 'hours', itemId, checked)
+                    }
                   />
                 )}
               </div>
@@ -802,7 +1118,7 @@ const Devform: React.FC = () => {
                 <InstructionButton onClick={() => setOpenModal('landing')} />
               </div>
 
-              <div className="bg-base-100 p-4 rounded-lg">
+              <div className="bg-base-100 p-4 rounded-lg border-4 border-orange-500">
                 <CheckboxField
                   label="Include Landing Image"
                   name="landing.image"
@@ -827,7 +1143,9 @@ const Devform: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="landing"
+                    field="image"
                     value={formData.landing.image.exclusionReason || ''}
                     onChange={(e) => {
                       setFormData(prev => ({
@@ -838,6 +1156,10 @@ const Devform: React.FC = () => {
                         }
                       }));
                     }}
+                    checklistItems={formData.landing.image.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('landing', 'image', itemId, checked)
+                    }
                   />
                 )}
               </div>
@@ -860,7 +1182,9 @@ const Devform: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="landing"
+                    field="title"
                     value={formData.landing.title.exclusionReason || ''}
                     onChange={(e) => {
                       setFormData(prev => ({
@@ -871,6 +1195,10 @@ const Devform: React.FC = () => {
                         }
                       }));
                     }}
+                    checklistItems={formData.landing.title.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('landing', 'title', itemId, checked)
+                    }
                   />
                 )}
               </div>
@@ -901,7 +1229,9 @@ const Devform: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <ExclusionReason
+                  <UniversalExclusionReason
+                    section="landing"
+                    field="subtext"
                     value={formData.landing.subtext.exclusionReason || ''}
                     onChange={(e) => {
                       setFormData(prev => ({
@@ -912,6 +1242,10 @@ const Devform: React.FC = () => {
                         }
                       }));
                     }}
+                    checklistItems={formData.landing.subtext.checklist || []}
+                    onChecklistChange={(itemId, checked) => 
+                      handleChecklistChange('landing', 'subtext', itemId, checked)
+                    }
                   />
                 )}
               </div>
@@ -982,11 +1316,25 @@ const Devform: React.FC = () => {
                           />
                         </div>
                       ) : (
-                        <ExclusionReason
+                        <UniversalExclusionReason
+                          section="services"
+                          field="cards"
                           value={card.exclusionReason || ''}
                           onChange={(e) => {
                             const newCards = [...formData.services.cards];
                             newCards[index] = { ...newCards[index], exclusionReason: e.target.value };
+                            setFormData(prev => ({
+                              ...prev,
+                              services: { ...prev.services, cards: newCards }
+                            }));
+                          }}
+                          checklistItems={card.checklist || []}
+                          onChecklistChange={(itemId, checked) => {
+                            const newCards = [...formData.services.cards];
+                            const updatedChecklist = newCards[index].checklist?.map((item) =>
+                              item.id === itemId ? { ...item, checked } : item
+                            ) || [];
+                            newCards[index] = { ...newCards[index], checklist: updatedChecklist };
                             setFormData(prev => ({
                               ...prev,
                               services: { ...prev.services, cards: newCards }
@@ -1055,12 +1403,18 @@ const Devform: React.FC = () => {
                       )}
                     </div>
                   ) : (
-                    <ExclusionReason
+                    <UniversalExclusionReason
+                      section="about"
+                      field={key}
                       value={field.exclusionReason || ''}
                       onChange={(e) => {
                         e.target.name = `about.${key}`;
                         handleExclusionReasonChange(e);
                       }}
+                      checklistItems={field.checklist || []}
+                      onChecklistChange={(itemId, checked) => 
+                        handleChecklistChange('about', key, itemId, checked)
+                      }
                     />
                   )}
                 </div>

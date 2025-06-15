@@ -15,7 +15,6 @@ export const ThemeInstructions: React.FC = () => (
       <li>Inspect Facebook graphics and banners for font information</li>
       <li>Screenshot signage and run through WhatTheFont.com</li>
       <li>Check logo files for embedded font information</li>
-      <li>If fonts not identifiable, mark as "Fonts not identifiable"</li>
     </ul>
   </div>
 );
@@ -35,7 +34,6 @@ export const BrandingInstructions: React.FC = () => (
     <ul className="list-disc list-inside ml-4 space-y-1">
       <li>Use exact name as listed on Google My Business/Yelp</li>
       <li>Record both short name (common usage) and long name (legal/full)</li>
-      <li>Check business registration if unclear</li>
     </ul>
   </div>
 );
@@ -86,8 +84,7 @@ export const HoursInstructions: React.FC = () => (
       <li>Primary source: Google My Business hours (most up-to-date)</li>
       <li>Cross-reference with business website if available</li>
       <li>Check Yelp listing for consistency</li>
-      <li>Note any special holiday hours or seasonal changes</li>
-      <li>Use 24-hour format for input (09:30, 18:00)</li>
+
       <li>Mark days as "Closed" if business is not open</li>
     </ul>
   </div>
@@ -105,7 +102,7 @@ export const LandingInstructions: React.FC = () => (
     </ul>
     <p className="mt-2"><strong>Content Creation:</strong></p>
     <ul className="list-disc list-inside ml-4 space-y-1">
-      <li><strong>Title:</strong> Create compelling headline based on services offered</li>
+      <li><strong>Title:</strong> If they have a slogan or something put it here</li>
       <li><strong>Subtext:</strong> Brief description highlighting key benefits/location</li>
       <li>Keep messaging focused on local auto service excellence</li>
     </ul>
@@ -150,7 +147,7 @@ export const AboutInstructions: React.FC = () => (
       <li>Look for founding information, years in business</li>
       <li>Note owner name if publicly available</li>
     </ul>
-    <p className="mt-2"><strong>Missing Assets Policy:</strong> If information not found, record in "Assets Missing Notes" column</p>
+
   </div>
 );
 

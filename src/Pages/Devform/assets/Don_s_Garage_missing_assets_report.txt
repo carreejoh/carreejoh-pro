@@ -1,0 +1,63 @@
+BUSINESS CONFIGURATION - MISSING ASSETS REPORT
+Generated: 6/15/2025
+============================================================
+
+SUMMARY:
+Total Missing Items: 11
+Excluded Items: 11
+Empty Items: 0
+
+BREAKDOWN BY SECTION:
+Contact Information: 1 missing
+Location Information: 3 missing
+Landing Page: 2 missing
+About Us: 5 missing
+
+DETAILED MISSING ITEMS:
+============================================================
+
+CONTACT INFORMATION:
+--------------------
+1. Email
+   Status: EXCLUDED
+
+
+LOCATION INFORMATION:
+---------------------
+1. Google Map Embed Link
+   Status: EXCLUDED
+
+2. Google Map Link
+   Status: EXCLUDED
+
+3. Apple Map Link
+   Status: EXCLUDED
+
+
+LANDING PAGE:
+-------------
+1. Title
+   Status: EXCLUDED
+
+2. Subtext
+   Status: EXCLUDED
+
+
+ABOUT US:
+---------
+1. Team image
+   Status: EXCLUDED
+
+2. Owner image
+   Status: EXCLUDED
+
+3. Description
+   Status: EXCLUDED
+
+4. Team description
+   Status: EXCLUDED
+
+5. Owner description
+   Status: EXCLUDED
+
+

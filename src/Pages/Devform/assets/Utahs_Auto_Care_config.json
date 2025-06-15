@@ -1,0 +1,261 @@
+{
+  "theme": {
+    "daisy_theme": "business",
+    "borders": "rounded-none",
+    "primary_color": {
+      "included": true,
+      "defaultValue": "#C13F41",
+      "customValue": "#0C47A1"
+    },
+    "secondary_color": {
+      "included": true,
+      "defaultValue": "#000000",
+      "customValue": "#959595"
+    },
+    "font": {
+      "included": true,
+      "defaultValue": "comic sans ms",
+      "customValue": "Segoe UI Medium"
+    }
+  },
+  "branding": {
+    "logo": {
+      "included": true,
+      "defaultValue": "/brand_imgs/logo.png",
+      "customValue": "https://upcdn.io/FW25bUs/image/uploads/2025/06/15/Utah Auto care logo-6oHn.jpg.crop"
+    },
+    "short_name": {
+      "included": true,
+      "defaultValue": "168 Auto Repair",
+      "customValue": "Utahs Auto Care"
+    },
+    "long_name": {
+      "included": true,
+      "defaultValue": "168 Auto Repair LLC",
+      "customValue": ""
+    }
+  },
+  "contact": {
+    "phone": {
+      "included": true,
+      "defaultValue": "(801) 200-7652",
+      "customValue": "(801) 200-7652"
+    },
+    "phoneLink": {
+      "included": true,
+      "defaultValue": "8019068168",
+      "customValue": "8012007652"
+    },
+    "email": {
+      "included": true,
+      "defaultValue": "168_Auto_Repair@gmail.com",
+      "customValue": "",
+      "semiCustomValue": "Utahs_Auto_Care@gmail.com"
+    }
+  },
+  "location": {
+    "address": {
+      "included": true,
+      "defaultValue": "220 N Redwood Rd",
+      "customValue": "220 N Redwood Rd"
+    },
+    "addressSecondary": {
+      "included": true,
+      "defaultValue": "North Salt Lake, UT 84054",
+      "customValue": "North Salt Lake, UT 84054"
+    },
+    "addressFull": {
+      "included": true,
+      "defaultValue": "61 2100 S, South Salt Lake, UT 84115",
+      "customValue": "220 N Redwood Rd, North Salt Lake, UT 84054"
+    },
+    "googleMapEmbedLink": {
+      "included": true,
+      "defaultValue": "https://www.google.com/maps/embed?...168%20Auto%20Repair",
+      "customValue": ""
+    },
+    "googleMapLink": {
+      "included": true,
+      "defaultValue": "https://www.google.com/maps/place/168+Auto+Repair...",
+      "customValue": ""
+    },
+    "appleMapLink": {
+      "included": true,
+      "defaultValue": "https://maps.apple.com/?address=168%20W%20Gregson...",
+      "customValue": ""
+    }
+  },
+  "hours": {
+    "included": true,
+    "defaultValue": [
+      {
+        "day": "Monday",
+        "time": "9:30 AM - 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "time": "9:30 AM - 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "time": "9:30 AM - 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "time": "9:30 AM - 6 PM"
+      },
+      {
+        "day": "Friday",
+        "time": "9:30 AM - 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "time": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "customValue": [
+      {
+        "day": "Monday",
+        "time": "10:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ]
+  },
+  "landing": {
+    "image": {
+      "included": true,
+      "defaultValue": "/brand_imgs/hero.png",
+      "customValue": "https://upcdn.io/FW25bUs/raw/uploads/2025/06/15/utah auto care 1-3S9z.PNG"
+    },
+    "title": {
+      "included": true,
+      "defaultValue": "Quality Service at Record Speeds",
+      "customValue": "Used vehicle dealership and repair shop with cheap prices and amazing customer service!"
+    },
+    "subtext": {
+      "included": true,
+      "defaultValue": "Honest, skilled mechanics serving Salt Lake City and beyond. We keep you running smoothly.",
+      "customValue": ""
+    },
+    "cta": "GIVE US A CALL",
+    "type": 0
+  },
+  "services": {
+    "cards": {
+      "included": true,
+      "defaultValue": [
+        {
+          "title": "Tire Services",
+          "description": "We handle all your tire needs with expert care.",
+          "image": "/services_imgs/tireBalance.jpg",
+          "items": [
+            "Tire repair",
+            "Tire balancing",
+            "Tire swapping"
+          ]
+        },
+        {
+          "title": "Engine Repair",
+          "description": "Keep your engine running like new.",
+          "image": "/services_imgs/engineRepair.jpg",
+          "items": [
+            "Diagnostics",
+            "Timing belt replacement",
+            "Engine rebuild"
+          ]
+        },
+        {
+          "title": "Scheduled Maintenance",
+          "description": "Regular service to keep your vehicle in top shape.",
+          "image": "/services_imgs/oilChange.jpeg",
+          "items": [
+            "Oil change",
+            "Battery testing",
+            "Fluid change"
+          ]
+        },
+        {
+          "title": "Brakes",
+          "description": "Stay safe with professional brake service.",
+          "image": "/services_imgs/brakeJob.jpg",
+          "items": [
+            "Brake pad replacement",
+            "Rotor resurfacing",
+            "Fluid bleed"
+          ]
+        }
+      ],
+      "customValue": [
+        {
+          "title": "Buy Used Cars",
+          "description": "Find your perfect used car and take it home today.",
+          "image": "",
+          "items": [
+            "Great Prices",
+            "Friendly Sales Team",
+            "Great Selection"
+          ]
+        }
+      ]
+    }
+  },
+  "about": {
+    "team_image": {
+      "included": true,
+      "defaultValue": "/about_imgs/team.jpg",
+      "customValue": ""
+    },
+    "owner_image": {
+      "included": true,
+      "defaultValue": "/about_imgs/owner.png",
+      "customValue": ""
+    },
+    "description": {
+      "included": true,
+      "defaultValue": "Founded with a mission to redefine trust in auto repair, we’ve built our reputation on honesty, hard work, and community values. Whether it’s a quick tune-up or a major rebuild, you can count on us to get the job done right.",
+      "customValue": ""
+    },
+    "team_description": {
+      "included": true,
+      "defaultValue": "Exceptional team members ready to get you back on the road with precision and care. Each technician brings years of experience, honesty, and a commitment to getting the job done right the first time.",
+      "customValue": ""
+    },
+    "owner_name": {
+      "included": true,
+      "defaultValue": "John Doe",
+      "customValue": ""
+    },
+    "owner_description": {
+      "included": true,
+      "defaultValue": "Founded with a mission to redefine trust in auto repair, we’ve built our reputation on honesty, hard work, and community values. Whether it’s a quick tune-up or a major rebuild, you can count on us to get the job done right.",
+      "customValue": ""
+    }
+  }
+}

@@ -11,6 +11,11 @@
         "included": false,
         "defaultValue": "#000000",
         "customValue": ""
+      },
+      "font": {
+        "included": false,
+        "defaultValue": "comic sans ms",
+        "customValue": ""
       }
     },
     "branding": {
@@ -113,53 +118,36 @@
       "type": 0
     },
     "services": {
-      "background": {
+      "cards": {
         "included": false,
-        "defaultValue": "url(/services_imgs/tire_background.jpg)",
-        "customValue": ""
-      },
-      "cards": [
-        {
-          "title": "Tire Services",
-          "defaultValue": {
+        "defaultValue": [
+          {
+            "title": "Tire Services",
             "description": "We handle all your tire needs with expert care.",
             "image": "/services_imgs/tireBalance.jpg",
             "items": ["Tire repair", "Tire balancing", "Tire swapping"]
           },
-          "included": false,
-          "customValue": {}
-        },
-        {
-          "title": "Engine Repair",
-          "defaultValue": {
+          {
+            "title": "Engine Repair",
             "description": "Keep your engine running like new.",
             "image": "/services_imgs/engineRepair.jpg",
             "items": ["Diagnostics", "Timing belt replacement", "Engine rebuild"]
           },
-          "included": false,
-          "customValue": {}
-        },
-        {
-          "title": "Scheduled Maintenance",
-          "defaultValue": {
+          {
+            "title": "Scheduled Maintenance",
             "description": "Regular service to keep your vehicle in top shape.",
             "image": "/services_imgs/oilChange.jpeg",
             "items": ["Oil change", "Battery testing", "Fluid change"]
           },
-          "included": false,
-          "customValue": {}
-        },
-        {
-          "title": "Brakes",
-          "defaultValue": {
+          {
+            "title": "Brakes",
             "description": "Stay safe with professional brake service.",
             "image": "/services_imgs/brakeJob.jpg",
             "items": ["Brake pad replacement", "Rotor resurfacing", "Fluid bleed"]
-          },
-          "included": false,
-          "customValue": {}
-        }
-      ]
+          }
+        ],
+        "customValue": []
+      }
     },
     "about": {
       "team_image": {
