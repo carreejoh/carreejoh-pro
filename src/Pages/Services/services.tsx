@@ -6,7 +6,7 @@ const Services: React.FC = () => {
     return (
         <main
             id="services"
-            className="min-h-screen bg-base-200 text-base-content pb-8 pt-10 flex flex-col items-center 
+            className="min-h-screen bg-base-300 text-base-content pb-8 pt-10 flex flex-col items-center 
             px-6
         md:px-8    /* 2rem on ≥768px */
         lg:px-32   /* 8rem on ≥1024px */

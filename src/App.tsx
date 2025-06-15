@@ -3,10 +3,14 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 
 // Pages
-import Landing from "./Pages/home";
-import Services from "./Pages/services";
-import ContactPage from "./Pages/contact";
-import Devform from "./Pages/Devform";
+import Landing from "./Pages/Home/home";
+import Services from "./Pages/Services/services";
+import ContactPage from "./Pages/Contact/contact";
+import Devform from "./Pages/Devform/Devform";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
+
+import HotLeadLanding from "./Pages/HotLeadPayment/HotLeadLanding";
+import HotLeadPayment from "./Pages/HotLeadPayment/HotLeadPayment";
 
 function App() {
   return (
@@ -18,7 +22,7 @@ function App() {
         2) make this inner box exactly `100vh - 6rem` tall.
         3) give it `overflow-y-auto` and `scrolling-touch` for iOS smooth scroll.
       */}
-      <div className="w-full bg-base-200 pt-24">
+      <div className="w-full bg-base-300 pt-24">
         <div
           className="
             min-h-[calc(100vh-6rem)]
@@ -32,6 +36,13 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/devform" element={<Devform />} />
+
+            {/* For hot lead -> sale */}
+
+            <Route path="/first-step/:businessName" element={<HotLeadLanding/>}/>
+            <Route path="/payment1/:businessName/:deployedURL" element={<HotLeadPayment/>}/>
+
+            <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
           </Routes>
         </div>
       </div>

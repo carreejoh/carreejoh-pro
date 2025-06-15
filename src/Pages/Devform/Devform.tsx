@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import FormSection from './Devform/components/FormSection';
-import TextInput from './Devform/components/TextInput';
-import ColorInput from './Devform/components/ColorInput';
-import CheckboxField from './Devform/components/CheckboxField';
-import TextAreaInput from './Devform/components/TextAreaInput';
-// import HoursInput from './Devform/components/HoursInput';
-import ServiceCard from './Devform/components/ServiceCard';
-import PictureUploader from './Devform/components/pictureUploader';
-import InstructionModels from './Devform/components/InstructionModels';
-import InstructionModal from './Devform/components/InstructionModal';
-import InstructionButton from './Devform/components/InstructionButton';
-import EnhancedExclusionReason from './Devform/components/EnhancedExclusionReason';
-import UniversalExclusionReason from './Devform/components/UniversalExclusionReason';
-import { ChecklistItem, createChecklist } from './Devform/components/ChecklistManager';
-import { generateConfig, downloadConfig } from './Devform/utlis/generate_config';
-import { downloadMissingReport } from './Devform/utlis/generate_missing';
+import FormSection from './components/FormSection';
+import TextInput from './components/TextInput';
+import ColorInput from './components/ColorInput';
+import CheckboxField from './components/CheckboxField';
+import TextAreaInput from './components/TextAreaInput';
+// import HoursInput from './components/HoursInput';
+import ServiceCard from './components/ServiceCard';
+import PictureUploader from './components/pictureUploader';
+import InstructionModels from './components/InstructionModels';
+import InstructionModal from './components/InstructionModal';
+import InstructionButton from './components/InstructionButton';
+import EnhancedExclusionReason from './components/EnhancedExclusionReason';
+import UniversalExclusionReason from './components/UniversalExclusionReason';
+import { ChecklistItem, createChecklist } from './components/ChecklistManager';
+import { generateConfig, downloadConfig } from './utlis/generate_config';
+import { downloadMissingReport } from './utlis/generate_missing';
 
 // interface DayHours {
 //   day: string;
