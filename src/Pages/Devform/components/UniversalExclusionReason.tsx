@@ -1,6 +1,6 @@
 import React from 'react';
 import EnhancedExclusionReason from './EnhancedExclusionReason';
-import { ChecklistItem, getChecklistType } from './ChecklistManager';
+import { ChecklistItem } from './ChecklistManager';
 
 interface UniversalExclusionReasonProps {
   section: string;
@@ -12,7 +12,6 @@ interface UniversalExclusionReasonProps {
 }
 
 const UniversalExclusionReason: React.FC<UniversalExclusionReasonProps> = ({
-  section,
   field,
   value,
   onChange,

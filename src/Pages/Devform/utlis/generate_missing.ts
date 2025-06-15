@@ -242,6 +242,7 @@ export const generateMissingReport = (formData: FormData) => {
   });
 
   emptyServices.forEach((card, index) => {
+    console.log(card)
     missingItems.push({
       section: 'Services',
       field: `Service Card ${index + 1} - Missing Information`,

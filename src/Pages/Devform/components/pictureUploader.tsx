@@ -1,6 +1,6 @@
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface PictureUploaderProps {
   pictureState: { cropped: string; original: string };
@@ -28,11 +28,11 @@ function PictureUploader({
   const [isUploaded, setIsUploaded] = useState(false);
 
   // Reset upload state when pictureState is cleared
-  useEffect(() => {
-    if (!pictureState.cropped && !pictureState.original) {
-      setIsUploaded(false);
-    }
-  }, [pictureState]);
+  // useEffect(() => {
+  //   if (!pictureState.cropped && !pictureState.original) {
+  //     setIsUploaded(false);
+  //   }
+  // }, [pictureState]);
 
   return (
     <UploadButton

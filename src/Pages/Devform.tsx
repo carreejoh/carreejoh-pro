@@ -4,7 +4,6 @@ import TextInput from './Devform/components/TextInput';
 import ColorInput from './Devform/components/ColorInput';
 import CheckboxField from './Devform/components/CheckboxField';
 import TextAreaInput from './Devform/components/TextAreaInput';
-import ExclusionReason from './Devform/components/ExclusionReason';
 // import HoursInput from './Devform/components/HoursInput';
 import ServiceCard from './Devform/components/ServiceCard';
 import PictureUploader from './Devform/components/pictureUploader';
@@ -13,7 +12,7 @@ import InstructionModal from './Devform/components/InstructionModal';
 import InstructionButton from './Devform/components/InstructionButton';
 import EnhancedExclusionReason from './Devform/components/EnhancedExclusionReason';
 import UniversalExclusionReason from './Devform/components/UniversalExclusionReason';
-import { ChecklistItem, createChecklist, getChecklistType } from './Devform/components/ChecklistManager';
+import { ChecklistItem, createChecklist } from './Devform/components/ChecklistManager';
 import { generateConfig, downloadConfig } from './Devform/utlis/generate_config';
 import { downloadMissingReport } from './Devform/utlis/generate_missing';
 
