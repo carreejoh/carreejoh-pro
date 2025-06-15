@@ -11,6 +11,7 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 import HotLeadLanding from "./Pages/HotLeadPayment/HotLeadLanding";
 import HotLeadPayment from "./Pages/HotLeadPayment/HotLeadPayment";
+import HotLeadPaymentSuccess from "./Pages/HotLeadPayment/HotLeadPaymentSuccess";
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
 
             {/* For hot lead -> sale */}
 
-            <Route path="/first-step/:businessName" element={<HotLeadLanding/>}/>
+            <Route path="/first-step/:businessName/:deployedURL" element={<HotLeadLanding/>}/>
+            <Route path="/first-step/success" element={<HotLeadPaymentSuccess/>}/>
             <Route path="/payment1/:businessName/:deployedURL" element={<HotLeadPayment/>}/>
 
             <Route path="/privacy" element={<PrivacyPolicy/>}/>
