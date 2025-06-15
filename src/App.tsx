@@ -42,7 +42,7 @@ function App() {
             <Route path="/first-step/:businessName" element={<HotLeadLanding/>}/>
             <Route path="/payment1/:businessName/:deployedURL" element={<HotLeadPayment/>}/>
 
-            <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+            <Route path="/privacy" element={<PrivacyPolicy/>}/>
           </Routes>
         </div>
       </div>
