@@ -65,7 +65,7 @@ const HotLeadLanding: React.FC = () => {
                     <Link className="btn btn-primary btn-lg max-w-56" to="https://buy.stripe.com/bJecN5d7W7UY1wj3S25AQ00">
                         Purchase Your Site
                     </Link>
-                    <Link className="btn btn-lg" to="/">
+                    <Link className="btn btn-lg" to="https://calendly.com/jonny-revupwebsites/30min">
                         I'd prefer to schedule a call first
                     </Link>
                 </div>
