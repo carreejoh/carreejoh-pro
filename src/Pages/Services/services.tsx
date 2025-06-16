@@ -37,9 +37,6 @@ const Services: React.FC = () => {
                     <li className="font-regular">
                         <strong>Backend & Server Hosting:</strong> $10-$200/month (user data, receipts, uploaded images)
                     </li>
-                    {/* <li className="font-regular">
-                        <strong>Third-Party API Fees:</strong> $3-$100/month (live yelp reviews, custom data)
-                    </li> */}
                 </ul>
             </section>
 

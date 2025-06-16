@@ -23,7 +23,7 @@ const HotLeadLanding: React.FC = () => {
                     Hello {formattedBusinessName}, 
                 </p> */}
 
-                <h2 className="text-lg md:text-xl text-base-content font-semibold text-left">
+                <h2 className="text-lg md:text-xl text-base-content font-semibold text-left font-exo">
                     Client details:
                 </h2>
                 <ul className="list-disc list-inside space-y-2 mt-3">
@@ -35,7 +35,7 @@ const HotLeadLanding: React.FC = () => {
                     </li>
                 </ul>
 
-                <h2 className="text-lg md:text-xl text-base-content font-semibold text-left mt-6">
+                <h2 className="text-lg md:text-xl text-base-content font-semibold text-left font-exo mt-6">
                     First steps:
                 </h2>
                 <ul className="list-disc list-inside space-y-2 mt-3">
@@ -52,10 +52,10 @@ const HotLeadLanding: React.FC = () => {
 
                 <div className="divider"></div>
 
-                <h2 className="text-lg md:text-xl text-base-content font-semibold text-left">
+                <h2 className="text-lg md:text-xl text-base-content font-semibold text-left font-exo">
                     Ready to get started?
                 </h2>
-                <p className="text-base-content/80 opacity-80 leading-relaxed indent-8 mt-3">
+                <p className="text-base-content/80 opacity-80 leading-relaxed mt-3">
                     After successfully submitting your first payment you'll be directed to either fill out a form,
                     or schedule a Calendly call. If you'd prefer to talk details before paying we can do that as well.
                 </p>

@@ -8,9 +8,9 @@ import Services from "./Pages/Services/services";
 import ContactPage from "./Pages/Contact/contact";
 import Devform from "./Pages/Devform/Devform";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 import HotLeadLanding from "./Pages/HotLeadPayment/HotLeadLanding";
-import HotLeadPayment from "./Pages/HotLeadPayment/HotLeadPayment";
 import HotLeadPaymentSuccess from "./Pages/HotLeadPayment/HotLeadPaymentSuccess";
 
 function App() {
@@ -27,9 +27,9 @@ function App() {
         <div
           className="
             min-h-[calc(100vh-6rem)]
-      overflow-y-auto
-      scroll-smooth
-      overscroll-contain
+            overflow-y-auto
+            scroll-smooth
+            overscroll-contain
           "
         >
           <Routes>
@@ -42,9 +42,12 @@ function App() {
 
             <Route path="/first-step/:businessName/:deployedURL" element={<HotLeadLanding/>}/>
             <Route path="/first-step/success" element={<HotLeadPaymentSuccess/>}/>
-            <Route path="/payment1/:businessName/:deployedURL" element={<HotLeadPayment/>}/>
+
+            <Route path="/payment1/:businessName/:deployedURL" />
 
             <Route path="/privacy" element={<PrivacyPolicy/>}/>
+
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>
