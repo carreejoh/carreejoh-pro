@@ -28,15 +28,13 @@ const ContactPage: React.FC = () => {
             // 2) pull values out with FormData
             const data = new FormData(form);
             const params = {
-                name: data.get("name") as string,  // <-- matches {{ name }}
-                user_email: data.get("user_email") as string,  // <-- matches {{ user_email }}
+                name: data.get("name") as string,
+                user_email: data.get("user_email") as string,
                 site_type: data.get("site_type") as string,
                 message: data.get("message") as string,
-
-                // These only matter if your template is *also* using them:
                 reply_to: data.get("user_email") as string,
-                // from_email is ignored if your template "Use Default Email Address"
                 from_email: "carterjohnson@carreejoh.biz",
+                to_email: "carter@revupwebsites.com,jonny@revupwebsites.com", 
             };
             await emailjs.send(
                 "service_ei0rkde",
@@ -91,7 +89,7 @@ const ContactPage: React.FC = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <input
-                        className={getInputClass("user_email")}
+                            className={getInputClass("user_email")}
                             onBlur={() =>
                                 setTouchedFields((prev) => ({ ...prev, user_email: true }))
                             }
@@ -141,7 +139,7 @@ const ContactPage: React.FC = () => {
 
                     <button
                         type="submit"
-                        className="btn btn-primary btn-lg flex items-center justify-center gap-2 w-36"
+                        className="btn btn-primary btn-lg flex items-center justify-center gap-2 w-48"
                         disabled={isSent || isSending}
                     >
                         {isSent ? (
