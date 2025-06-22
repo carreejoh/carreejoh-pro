@@ -7,7 +7,7 @@ const ServicePriceCards: React.FC = () => {
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Static Site</h2>
-                        <span className="text-xl text-[#65A77F] font-semibold ">$800</span>
+                        <span className="text-xl text-[#65A77F] font-semibold ">$1200</span>
                     </div>
                     <p className="text-base-content/80">Great for businesses with no user data, and minimal functionality.</p>
                     <ul className="mt-5 flex flex-col gap-2 text-xs">
@@ -66,7 +66,7 @@ const ServicePriceCards: React.FC = () => {
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Interactive Site</h2>
-                        <span className="text-xl text-[#65A77F] font-semibold ">$1500</span>
+                        <span className="text-xl text-[#65A77F] font-semibold ">$1900</span>
                     </div>
                     <p className="text-base-content/80">For businesses that will need to regularly change page info, or give updates.</p>
                     <ul className="mt-5 flex flex-col gap-2 text-xs">
@@ -126,7 +126,7 @@ const ServicePriceCards: React.FC = () => {
                 <div className="card-body">
                     <div className="flex justify-between">
                         <h2 className="text-3xl font-bold">Server Site</h2>
-                        <span className="text-xl text-[#65A77F] font-semibold ">$2500</span>
+                        <span className="text-xl text-[#65A77F] font-semibold ">$2900</span>
                     </div>
                     <p className="text-base-content/80">A premium site for businesses that need to store user info, keep detailed records.</p>
                     <ul className="mt-5 flex flex-col gap-2 text-xs">
